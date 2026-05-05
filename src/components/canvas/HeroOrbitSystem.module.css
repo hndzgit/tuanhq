@@ -1,0 +1,101 @@
+.orbitSystem {
+  position: absolute;
+  top: 50%;
+  left: -5%; /* Move to the left */
+  transform: translateY(-50%) scale(1.1); /* Only translate Y to keep it aligned vertically */
+  z-index: 1; /* Below the hero text but above 3D background */
+  pointer-events: none;
+  width: min(560px, 95%);
+  height: min(560px, 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+@media (max-width: 992px) {
+  .orbitSystem {
+    transform: translateY(-50%) scale(0.9);
+  }
+}
+
+@media (max-width: 768px) {
+  .orbitSystem {
+    display: none;
+  }
+}
+
+.core {
+  position: absolute;
+  width: 60px; height: 60px;
+  background: linear-gradient(135deg, var(--primary-red), var(--primary-green));
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(237, 28, 36, 0.4);
+  animation: pulse 1.5s infinite alternate; /* Faster */
+}
+
+.orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.15); /* Dark theme */
+  animation: spin infinite linear;
+}
+
+.orbit1 { width: 160px; height: 160px; animation-duration: 7s; } /* Faster */
+.orbit2 { width: 260px; height: 260px; animation-duration: 18s; animation-direction: reverse; border-style: dotted; border-color: rgba(255, 51, 102, 0.3); }
+.orbit3 { width: 380px; height: 380px; animation-duration: 28s; border-style: solid; border-color: rgba(255,255,255,0.05); }
+
+.satellite {
+  position: absolute;
+  top: -10px; left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+.sat1 { width: 20px; height: 20px; background: var(--primary-green); box-shadow: 0 0 15px var(--primary-green-glow); }
+.sat2 { width: 15px; height: 15px; background: #fff; }
+.sat3 { width: 12px; height: 12px; background: var(--primary-red); box-shadow: 0 0 15px var(--primary-red-glow); }
+
+.techRing {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.2);
+  animation: ringPulse 2s ease-out infinite; /* Faster */
+}
+.ring1 { width: 100px; height: 100px; top: 10%; left: 15%; animation-delay: 0s; }
+.ring2 { width: 60px; height: 60px; bottom: 20%; right: 15%; border-color: var(--primary-green); animation-delay: -1s; }
+
+.techHex {
+  position: absolute;
+  width: 30px; height: 30px;
+  border: 2px solid rgba(16, 185, 129, 0.4);
+  animation: hexFloat 4s ease-in-out infinite; /* Faster */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.hex1 { top: 15%; right: 10%; border-color: rgba(255, 51, 102, 0.4); animation-delay: -1s; }
+.hex2 { bottom: 25%; left: 5%; animation-delay: -2s; animation-duration: 5s; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  from { transform: scale(0.95); box-shadow: 0 0 20px rgba(255, 51, 102, 0.2); }
+  to { transform: scale(1.1); box-shadow: 0 0 40px rgba(255, 51, 102, 0.6); }
+}
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes ringPulse {
+  0% { transform: scale(0.8); opacity: 0.6; }
+  50% { transform: scale(1.2); opacity: 0; }
+  100% { transform: scale(0.8); opacity: 0; }
+}
+
+@keyframes hexFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.4; }
+  50% { transform: translateY(-15px) rotate(30deg); opacity: 0.8; }
+}
