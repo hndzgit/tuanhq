@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# BIM Innovator
 
-First, run the development server:
+### Giải pháp BIM, Digital Twin và chuyển đổi số cho hạ tầng giao thông
 
-```bash
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Explore_Website-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://tuanhq.vercel.app)
+![Next.js](https://img.shields.io/badge/Next.js_16-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=111)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white)
+![i18n](https://img.shields.io/badge/Languages-4-2563EB?style=flat-square)
+
+</div>
+
+## Giới thiệu
+
+**BIM Innovator** là website giới thiệu năng lực, dự án và dịch vụ trong lĩnh vực Building Information Modeling, Digital Twin và chuyển đổi số. Sản phẩm được thiết kế cho ngành hạ tầng giao thông tại Việt Nam với trải nghiệm hiện đại, chuyển động mượt và không gian 3D tương tác.
+
+## Điểm nổi bật
+
+- Giao diện đa ngôn ngữ: Tiếng Việt, English, 日本語 và 中文.
+- Hero và background 3D tương tác.
+- Giới thiệu chuyên môn, kinh nghiệm và các dự án tiêu biểu.
+- Hệ thống trang dịch vụ BIM theo từng nhóm giải pháp.
+- Hiệu ứng chuyển cảnh và animation bằng Framer Motion.
+- Thiết kế responsive cho desktop, tablet và mobile.
+- Metadata và Open Graph phục vụ SEO, chia sẻ mạng xã hội.
+
+## Nhóm dịch vụ
+
+| Nhóm | Nội dung |
+|---|---|
+| BIM Corporation | Tư vấn và triển khai BIM cho doanh nghiệp |
+| BIM Design | Thiết kế và phối hợp mô hình |
+| BIM Modeling | Xây dựng mô hình BIM chuyên sâu |
+| BIM Online | Đào tạo và hỗ trợ trực tuyến |
+| Digital Solutions | Digital Twin và giải pháp số hóa quản lý |
+
+## Công nghệ
+
+- Next.js 16 và React 19
+- JavaScript/JSX cùng cấu hình TypeScript
+- Three.js, React Three Fiber và Drei
+- Framer Motion
+- Lucide React và Maath
+
+## Chạy dự án
+
+~~~bash
+git clone https://github.com/hndzgit/tuanhq.git
+cd tuanhq
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+~~~
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mở <http://localhost:3000> để xem website.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Lệnh | Chức năng |
+|---|---|
+| <code>npm run dev</code> | Khởi động môi trường phát triển |
+| <code>npm run build</code> | Tạo bản build production |
+| <code>npm run start</code> | Chạy bản production |
 
-## Learn More
+## Cấu trúc chính
 
-To learn more about Next.js, take a look at the following resources:
+~~~text
+src/
+├── app/          # Routes, layout và metadata
+├── components/   # UI, nội dung và thành phần 3D
+└── locales/      # Nội dung cho 4 ngôn ngữ
+~~~
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Demo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Xem phiên bản đang triển khai tại **[tuanhq.vercel.app](https://tuanhq.vercel.app)**.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<div align="center">
+Built for modern BIM and Digital Twin experiences
+</div>
